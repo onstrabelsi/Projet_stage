@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/insert_default_times" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/timeRangeLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/timeRange"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/timeRangeFromLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/dateFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/timeRangeToLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/dateTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/task" />
+
+                <RadioButton
+                    android:id="@+id/radioHolidayVacationNonWorkingDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/holidayVacationNonworkingday" />
+
+                <RadioButton
+                    android:id="@+id/radioWorkingTimeToTargetTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setWorkingTimeToTargetTime" />
+
+                <RadioButton
+                    android:id="@+id/radioChangeTargetTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/changeTargetTime" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/taskLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/task"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/optional"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"></EditText>
+
+            <TextView
+                android:id="@+id/targetTimeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/targetTime"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/targetTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/targetTimeDescription"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"></EditText>
+
+            <CheckBox
+                android:id="@+id/checkAlsoOnNonWorkingDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/alsoOnNonWorkingDays" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

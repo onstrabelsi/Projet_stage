@@ -1,0 +1,92 @@
+<h3>FAQ: https://zephyrsoft.org/trackworktime/faq</h3>
+<br>
+<h3>Web Site: https://zephyrsoft.org/trackworktime</h3>
+<br>
+This app can track your work time easily! You can automate time tracking using geo-fencing functions (see below).
+You may also <b>categorize each recorded interval</b> by a predefined client/task and an arbitrary text.
+Of course, the list of clients/tasks can be edited to suit your needs. The app also has a widget for your home screen.<br>
+<br>
+Additionally, if you wish, your <b>flexible time account is taken care of</b>: you always see how much you worked.
+You can also keep an eye on how much work time is left for today or for the current week (by a <b>notification</b>
+which you can enable).<br>
+<br>
+The app enables you to modify the planned working time effortlessly - just tap on the date you want to edit in the
+main table.<br>
+<br>
+You may provide the <b>geo-coordinates</b> of your work place and the app can
+automatically clock you in while you are at work. This is done <b>without using GPS</b>, so your battery won't
+be emptied by this app.<br>
+<br>
+You also may provide a <b>Wi-Fi network name</b> which is visible at your work place the app can use to clock in automatically
+when this SSID is in range (you don't need to be connected to this network). Of course you should have Wi-Fi enabled
+for this to work.<br>
+<br>
+You don't want to open the app for clocking in and out? No problem - there are at least three ways to do that:
+add the widget to your home screen, or use launcher shortcuts (long press the app icon for that), or
+add a new quick settings tile to your panel by tapping on the pencil below and dragging
+the "Track Work Time" tile up which then can toggle your clocked-in state.<br>
+<br>
+If you prefer to use other apps like LlamaLab Automate or Tasker for tracking your movements, that's fine - <b>TWT can be triggered
+from other apps</b> and just do the book-keeping of your work time. In this case, you have to create broadcast intents
+with the actions org.zephyrsoft.trackworktime.ClockIn or org.zephyrsoft.trackworktime.ClockOutrespecively.
+When using ClockIn, you can also set the parameters task=... and text=... in the "extra" section
+of the intent so your events are more meaningful. You can also use the action
+org.zephyrsoft.trackworktime.StatusRequest to get the current state of TWT: is the user clocked in,
+and if so, with which task and how much time remains for today? For more details on this, see the web site.<br>
+<br>
+If you have a <b>Pebble</b> smart watch, the app will notify you on clock-in and clock-out events which is especially
+useful if you want to be in the know about automatic time tracking via location and/or WiFi.<br>
+<br>
+If you want to <b>back up your data</b>, you have the choice: use Google's mechanism or do it on your own. To use Google's
+servers just enable the corresponding option. And if you don't want to give your data to Google: The app automatically
+creates a backup each day which is written to the directory you allowed for the app (if you didn't allow it,
+no automatic backups are written). You could use a synchronization app of your choice to
+periodically copy the whole directory (or just the subdirectory "twt_automatic_backup").<br>
+<br>
+Finally, the app can generate <b>reports</b> for you. The raw events report is the right thing if you want to
+import your data somewhere else, while year/month/week reports are fine if you want to keep track of your
+task progress.<br>
+<br>
+Important note: <b>This app definitely won't use your personal data for anything you don't want!</b>
+If the app crashes, it will offer you to send some information about the crash circumstances to the developer
+(and does that only if you agree, you will be asked every time). The app does NOT include tracked times or
+places in the bug report, but the general log file is appended and might potentially include personal data -
+if so, it will be kept strictly confidential and only used to identify the problem.<br>
+<br>
+<b>This is an open source project</b>, so if there's something you don't like, you are very welcome to
+file an issue or even fix things yourself and create a pull request.
+Please don't try to communicate with me via reviews, that doesn't work in both directions.
+You can always write me an email and I'll see what I can do. Web site and email address as stated above.<br>
+<br>
+<br>
+<h2>Privacy Policy</h2>
+<b>tl;dr: Your personal data will not be sent anywhere by the app without your explicit intention.</b><br>
+This privacy policy is also available online: https://zephyrsoft.org/trackworktime/privacy<br>
+<br>
+<h3>User Privacy - especially for location data</h3>
+This app can be configured to track the user's coarse location via cell network (no exact GPS tracking is used) or by a visible Wi-Fi network name (for which it's necessary to continuously check all visible Wi-Fi network names). All resulting location data is stored on the user's device, and it's not sent anywhere except if the user explicitly triggers it. Read on for more details.<br>
+<h3>Which personal data is used by the app?</h3>
+Track Work Time is made - as the name says - to track your work time. For this purpose it handles the events (clock-in time, clock-out time, task, hint) and the options (task list, home time zone, automatic pause times, weekly work time target, working days, geo-location of your work place, Wi-Fi name at your work place) you enter into the app.<br>
+If you choose to enable tracking by location and/or Wi-Fi, your coarse location and/or visible Wi-Fi network names are also used by the app.<br>
+<h3>How is the personal data used?</h3>
+All data is kept locally on your device, specifically in two locations: the app's internal storage/database (all data mentioned above is stored here) and on your device's shared storage (automatic backups, manual backups, log files). The log files may contain Wi-Fi names (if you enabled tracking by Wi-Fi) and/or coarse geo-locations (if you enabled tracking by location).<br>
+There are three occasions in which personal data may be sent somewhere by the app. In all these occasions you actively have to decide if you want to send the data.<br>
+<ul>
+<li>Backup to Google servers: If you choose to enable the corresponding option, your data is stored on Google's servers and can be restored from there. The developer of this app doesn't have any possibility to make a statement about data security on Google's infrastructure. It's up to you, don't enable this option if you don't want Google to have your data.</li>
+<li>Crash reports: If the app suffers a crash, you are given the opportunity to send a crash report to the developer. There is some data included in this crash report so the crash origin can be found and fixed, specifically the Android version you have, the version of the app you use, the configuration of the app which was active while it crashed, the date you started the app, the date the crash happened, a unique crash report ID, the ID of your installation (so different crash reports can be correlated), your device's brand and product model name (so problems from different users which use the same hardware can be correlated), a stack trace for identifying the problem and a portion of the log file. All data sent to the developer is transmitted securely via HTTPS and kept strictly confidential - it's only used to identify the problem.</li>
+<li>Send Logs: If you encounter a problem with the app, you may select this menu item and send your log file to the developer via email. If you want to use this feature, you always can choose to firstly send it to yourself and check that no data is in the log file you don't want to disclose and then send the (possibly anonymized) log file to the developer.</li>
+</ul>
+<h3>What about some details?</h3>
+The following sections explain why the app needs the permission it requests:<br>
+<h4>ACCESS_COARSE_LOCATION / ACCESS_BACKGROUND_LOCATION / FOREGROUND_SERVICE</h4>
+If you want to auto-clock your time being at a specific location, you may give the coordinates and the app will detect when you enter and exit the location. It uses the cell phone network to get the coarse location, so your battery won't be drained by GPS. Please be aware that this app collects location data to enable tracking your work time by location and/or Wi-Fi even when the app is closed or not in use. If you don't like the app being able to do this, you may take away the permission - the app will continue to work without it.<br>
+<h4>ACCESS_WIFI_STATE / CHANGE_WIFI_STATE / ACCESS_FINE_LOCATION / FOREGROUND_SERVICE</h4>
+If you want to auto-clock your time being in range of a specific Wi-Fi network, you may give the network name (a.k.a. SSID) and the app will detect when you enter and exit the range of the Wi-Fi network. If you don't like the app being able to do this, you may take away the permission - the app will continue to work without it.<br>
+<h4>RECEIVE_BOOT_COMPLETED</h4>
+If you enable location-based clock-in and clock-out, the app checks periodically where you are. If your device reboots, it has to tell this to TWT or else TWT won't check the location correctly until you open it manually for the first time after the reboot. The background service is disabled by default.<br>
+<h4>INTERNET</h4>
+In some rare cases, the app might crash. To fix these crashes if they occur, it is critical to receive reports about them, so the app will offer you to send some information about the problem to the developer (me). The log file appended to the bug report may include personal data - if so, it will kept strictly confidential and only used to identify the problem. As this is an open source project, you can verify this very easily, just look at <a href="http://svn.zephyrsoft.org/svn/trackworktime/trunk/src/org/zephyrsoft/trackworktime/" target="_blank" rel="noopener noreferrer">the code</a>! Please note, if you don't like the app being able to do this, you may take away the permission or just tap "no" when asked to send a bug report - the app will continue to work without it, but perhaps some bugs might not be fixed.<br>
+<h4>VIBRATE</h4>
+The app can be configured to vibrate at location-based clock-in / clock-out events. If you don't like that, just don't enable the option in the app. It is disabled by default.<br>
+<h4>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</h4>
+It's a common use case that the app should work in the background and clock the user in and out automatically. This can only function correctly if Android itself does not pause the app to save battery, so the user may actively exempt Track Work Time from battery optimizations if desired (there's a menu item for that). This results in slightly more battery usage, but also much more accurate clock-in/clock-out times.<br>
